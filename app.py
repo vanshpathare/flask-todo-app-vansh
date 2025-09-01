@@ -26,7 +26,9 @@ def home():
         todo = Todo(title=title_, desc=desc_)
         db.session.add(todo)
         db.session.commit()
-        return redirect("http://127.0.0.1:8001/")
+        #return redirect("http://127.0.0.1:8001/")
+        return redirect("/")   # updated for Render
+
 
     allTodo = Todo.query.all()
     print(allTodo)
@@ -63,6 +65,10 @@ def delete(sno):
     return redirect("/")
 
 
+# given by sir while working with heroku
+# if __name__ == "__main__":  
+#     app.run(debug=True, port = 8001)
 
-if __name__ == "__main__":  
-    app.run(debug=True, port = 8001)
+
+if __name__ == "__main__":
+    db.create_all() 
