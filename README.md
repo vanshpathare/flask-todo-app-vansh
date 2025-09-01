@@ -19,3 +19,5 @@ Users can add, update, and delete tasks.
 2. Create a virtual environment:
    ```bash
    python -m venv venv
+3. Install dependencies: pip install -r requirements.txt
+4. Run the app: flask run
