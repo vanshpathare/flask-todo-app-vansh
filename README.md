@@ -21,3 +21,12 @@ Users can add, update, and delete tasks.
    python -m venv venv
 3. Install dependencies: pip install -r requirements.txt
 4. Run the app: flask run
+
+
+## Database Note
+This project uses **SQLite** as the database.  
+For security and simplicity, the database file (`todo.db`) is not included in this repository.  
+
+When you run the app for the first time, a new database will be created automatically inside the `instance/` folder.  
+
+If you want to reset your tasks, simply delete the `todo.db` file and restart the app.
